@@ -1,0 +1,64 @@
+# role-based-login-system
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Login System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Secure Access Portal</h1>
+  <p>Role-based login simulation</p>
+</header>
+
+<main class="container">
+
+  <!-- Login Card -->
+  <section class="card" id="loginCard">
+    <h2>Login</h2>
+
+    <form id="loginForm">
+      <label>Email</label>
+      <input type="email" id="email" required>
+
+      <label>Password</label>
+      <input type="password" id="password" required>
+
+      <button type="submit">Login</button>
+      <p class="error" id="loginError"></p>
+    </form>
+  </section>
+
+  <!-- Admin Dashboard -->
+  <section class="card hidden" id="adminPanel">
+    <h2>Admin Dashboard</h2>
+    <p>Access level: Administrator</p>
+    <ul>
+      <li>✔ Manage users</li>
+      <li>✔ View system logs</li>
+      <li>✔ System configuration</li>
+    </ul>
+    <button onclick="logout()">Logout</button>
+  </section>
+
+  <!-- User Dashboard -->
+  <section class="card hidden" id="userPanel">
+    <h2>User Dashboard</h2>
+    <p>Access level: Standard User</p>
+    <ul>
+      <li>✔ View profile</li>
+      <li>✔ Update information</li>
+      <li>✔ Submit requests</li>
+    </ul>
+    <button onclick="logout()">Logout</button>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
